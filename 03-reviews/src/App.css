@@ -10,7 +10,7 @@
 
 .slide__content {
     width: 100%;
-    max-width: 480px;
+    max-width: 580px;
     padding: 2rem 1rem;
     text-align: center;
     box-shadow: 4px 4px 8px rgba(0,0,0,0.1), -4px -4px 8px rgba(0,0,0,0.1);
@@ -46,7 +46,7 @@
 .slide__figure figcaption {
     position: absolute;
     top: 25px;
-    left: 30%;
+    left: 35%;
     background-color: var(--primary-color);
     color: var(--white-color);
     border-radius: 50%;
@@ -56,13 +56,14 @@
 
 .slide__info h4 {
     font-size: var(--fs-xl);
-    font-weight: 400;
+    font-weight: var(--fw-medium);
+    font-family: var(--playfair-font);
 }
 
 .slide__info h6 {
     font-size: var(--fs-md);
     color: var(--primary-color);
-    font-weight: 400;
+    font-weight: var(--fw-regular);
 }
 
 .slide__info p {

@@ -1,12 +1,15 @@
 /* google font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
 
 :root {
   --open-sans-font: 'Open Sans', sans-serif;
+  --playfair-font: 'Playfair Display', serif;
+
   --primary-color: #645cff;
   --white-color: #fff;
 
-  --fs-xl: 2rem;
+  --fs-xl: 2.5rem;
   --fs-lg: 1.4rem;
   --fs-md: 1.1rem;
   --fs-sm: 0.85rem;
