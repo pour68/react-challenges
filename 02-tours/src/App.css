@@ -27,6 +27,9 @@
 }
 
 .tour__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 4px 4px 8px rgba(0,0,0,0.1), -4px -4px 8px rgba(0,0,0,0.1);
   border-radius: 4px;
   overflow: hidden;
@@ -55,7 +58,7 @@
   right: 0;
 }
 
-.tour__info {
+.tour__info, .tour__action {
   padding: 0.5rem 1rem;
 }
 

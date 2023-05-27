@@ -67,6 +67,10 @@ img {
   text-transform: capitalize;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .loader {
   width: 100px;
   height: 100px;

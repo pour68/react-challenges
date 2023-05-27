@@ -21,9 +21,11 @@ const TourItem = (props) => {
                     {isTextSliced ? 'Read More' : 'Read Less'}
                 </span>
             </p>
-
-            <button onClick={() => onDeleteTour(tour.id)} className='btn btn-primary mt-2 mb-1'>Not Interested</button>
         </article>
+
+        <div className='tour__action'>
+            <button onClick={() => onDeleteTour(tour.id)} className='btn btn-primary w-100 mt-2 mb-1'>Not Interested</button>
+        </div>
     </li>);
 }
 
