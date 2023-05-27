@@ -1,6 +1,6 @@
 # React challenge 01
 
-Birthdate is a react UI challenge for bigginers.
+Birthdate is a react UI challenge for beginners.
 
 ## Needed skills
 
