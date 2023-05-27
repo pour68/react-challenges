@@ -11,7 +11,11 @@
 }
 
 .tour__empty {
-  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
 }
 
 .tour__list {

@@ -51,6 +51,14 @@ img {
   margin-bottom: 0.5rem;
 }
 
+.ml-2 {
+  margin-left: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
 .mx-auto {
   margin-inline: auto;
 }
@@ -59,12 +67,28 @@ img {
   text-transform: capitalize;
 }
 
+.loader {
+  width: 100px;
+  height: 100px;
+  margin-inline: auto;
+  border: 5px solid #c7c7c7;
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  animation-name: rounding;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+@keyframes rounding {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
 /* components */
 
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  width: 100%;
   border: none;
   border-radius: 4px;
   cursor: pointer;

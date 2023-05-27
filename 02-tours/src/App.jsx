@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import TourList from './components/TourList';
 import { sendGetRequest } from './utils/fetchData';
+import 'remixicon/fonts/remixicon.css'
 
 function App() {
   const [tours, setTours] = useState([]);
@@ -13,12 +14,17 @@ function App() {
     setTours(listOfDisplayedTour);
   }
 
+  const handleRefresh = async () => {
+    setLoading(true);
+    const toursData = await sendGetRequest("https://course-api.com/react-tours-project");
+
+    setTours(toursData);
+    setLoading(false);
+  }
+
   useEffect(() => {
     const fetchTours = async () => {
-      const toursData = await sendGetRequest("https://course-api.com/react-tours-project");
-
-      setTours(toursData);
-      setLoading(false);
+      await handleRefresh();
     }
 
     fetchTours();
@@ -30,10 +36,13 @@ function App() {
         <div className='tour__content'>
           <header className='tour__header'>
             <h1 className='title'>Our tours</h1>
-            <div className='divider divider-25 divider-primary mx-auto'></div>
+            <div className='divider divider-25 divider-primary mb-4 mx-auto'></div>
           </header>
 
-          <TourList tours={tours} loading={loading} onDeleteTour={handleDeleteTour} />
+          <TourList tours={tours}
+            loading={loading}
+            onDeleteTour={handleDeleteTour}
+            handleRefresh={handleRefresh} />
         </div>
       </div>
     </div>
