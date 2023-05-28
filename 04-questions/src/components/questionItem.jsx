@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import { BiMinus, BiPlus } from "react-icons/bi";
 
 const QuestionItem = (props) => {
     const { question } = props;
@@ -12,7 +13,7 @@ const QuestionItem = (props) => {
             <header className="question__header">
                 <h4>{question.title}</h4>
                 <span>
-                    {isDisplay ? "-" : "+"}
+                    {isDisplay ? <BiMinus /> : <BiPlus />}
                 </span>
             </header>
 

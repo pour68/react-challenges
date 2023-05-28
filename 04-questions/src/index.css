@@ -27,6 +27,11 @@
   font-family: var(--open-sans-font);
 }
 
+html {
+  scroll-behavior: smooth;
+  transition: all 0.3s;
+}
+
 img {
   max-width: 100%;
   height: auto;

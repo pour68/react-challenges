@@ -8,3 +8,4 @@ Questions is a react UI challenge for beginners.
 - js (array - map method)
 - react basics (starting project - components - reference css - import/export modules - useState hook - handle event)
 - react proptypes npm module
+- react icons npm package
