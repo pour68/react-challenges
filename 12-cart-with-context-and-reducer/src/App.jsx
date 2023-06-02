@@ -6,10 +6,12 @@ import TotalCart from './components/TotalCart'
 function App() {
 
   return (
-    <>
-      <TotalCart />
-      <Cart />
-    </>
+    <div className="cart">
+      <div className="cart__container container">
+        <TotalCart />
+        <Cart />
+      </div>
+    </div>
   )
 }
 

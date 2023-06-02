@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 
+// step 9: use data
 const TotalCart = () => {
-    const { total, carts } = useContext(CartContext);
+    const { total, amount } = useContext(CartContext);
 
     return (<div className="cart__total">
-        <span>Counts: {carts.length}</span>
+        <span>Counts: {amount}</span>
         <span>Total: {total}</span>
     </div>);
 }
