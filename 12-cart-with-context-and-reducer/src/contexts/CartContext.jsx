@@ -20,10 +20,11 @@ const CartProvider = ({ children }) => {
 
     // step 5: define handlers
     const clearCart = () => dispatch({ type: clearCartAction })
+    const toggleAmount = (id, type) => dispatch({ type: toggleAmountAction, payload: { id, type } })
+
     const remove = (id) => dispatch({ type: removeFromCartAction, payload: id })
     const increase = (id) => dispatch({ type: increaseItemAmoutOfCartAction, payload: id })
     const decrease = (id) => dispatch({ type: decreaseItemAmoutOfCartAction, payload: id })
-    const toggleAmount = (id, type) => dispatch({ type: toggleAmountAction, payload: { id, type } })
     const fetchData = async () => {
         dispatch({ type: loadingAction });
         const carts = await sendGetRequest('https://course-api.com/react-useReducer-cart-project');
