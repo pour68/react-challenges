@@ -2,7 +2,7 @@ import React, { useReducer, useEffect } from 'react'
 import cartReducer from '../reducers/cartReducers'
 import { sendGetRequest } from '../utils/fetchData'
 import PropTypes from "prop-types";
-import { clearCartAction, removeFromCartAction, increaseItemAmoutOfCartAction, decreaseItemAmoutOfCartAction, loadingAction, displayItemsAction, toggleAmountAction, getTotalsAction } from "../actions/cartActions";
+import { removeFromCartAction, increaseItemAmoutOfCartAction, decreaseItemAmoutOfCartAction, loadingAction, displayItemsAction, getTotalsAction } from "../actions/cartActions";
 
 // step 1: create context for cart
 const CartContext = React.createContext();
