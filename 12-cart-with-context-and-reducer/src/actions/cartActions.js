@@ -1,4 +1,4 @@
-// step 3: define all cart actions
+// step 4: define all cart actions
 const clearCartAction = "CLEAR_CART";
 const removeFromCartAction = "REMOVE";
 const increaseItemAmoutOfCartAction = "INCREASE";

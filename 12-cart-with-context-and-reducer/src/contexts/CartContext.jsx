@@ -1,11 +1,11 @@
-import React, { useReducer, useEffect } from 'react'
+import { useReducer, useEffect, createContext } from 'react'
 import cartReducer from '../reducers/cartReducers'
 import { sendGetRequest } from '../utils/fetchData'
 import PropTypes from "prop-types";
 import { removeFromCartAction, increaseItemAmoutOfCartAction, decreaseItemAmoutOfCartAction, loadingAction, displayItemsAction, getTotalsAction } from "../actions/cartActions";
 
 // step 1: create context for cart
-const CartContext = React.createContext();
+const CartContext = createContext();
 
 // step 3: define initial state
 const initialState = {
