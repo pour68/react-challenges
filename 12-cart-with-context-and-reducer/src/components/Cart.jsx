@@ -1,6 +1,6 @@
 import CartItem from "./CartItem";
 import { useContext } from "react";
-import { CartContext } from "../contexts/CartContext";
+import { CartContext } from "../contexts/cartContext";
 
 // step 10: display data
 const Cart = () => {
