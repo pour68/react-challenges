@@ -1,10 +1,8 @@
-import { clearCartAction, removeFromCartAction, increaseItemAmoutOfCartAction, decreaseItemAmoutOfCartAction, loadingAction, displayItemsAction, toggleAmountAction, getTotalsAction } from "../actions/cartActions";
+import { removeFromCartAction, increaseItemAmoutOfCartAction, decreaseItemAmoutOfCartAction, loadingAction, displayItemsAction, getTotalsAction } from "../actions/cartActions";
 
 // step 5: implement reducer actions
 const cartReducer = (state, action) => {
     switch (action.type) {
-        case clearCartAction:
-            return { ...state, carts: [] }
         case removeFromCartAction:
             return {
                 ...state,
@@ -57,23 +55,6 @@ const cartReducer = (state, action) => {
             return { ...state, loading: true }
         case displayItemsAction:
             return { ...state, carts: action.payload, loading: false }
-        case toggleAmountAction:
-            {
-                let tempCart = state.carts
-                    .map((cartItem) => {
-                        if (cartItem.id === action.payload.id) {
-                            if (action.payload.type === 'inc') {
-                                return { ...cartItem, amount: cartItem.amount + 1 }
-                            }
-                            if (action.payload.type === 'dec') {
-                                return { ...cartItem, amount: cartItem.amount - 1 }
-                            }
-                        }
-                        return cartItem
-                    })
-                    .filter((cartItem) => cartItem.amount !== 0)
-                return { ...state, carts: tempCart }
-            }
         default:
             return { ...state }
     }

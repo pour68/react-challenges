@@ -20,9 +20,6 @@ const CartProvider = ({ children }) => {
     const [state, dispatch] = useReducer(cartReducer, initialState)
 
     // step 6: define handlers
-    const clearCart = () => dispatch({ type: clearCartAction })
-    const toggleAmount = (id, type) => dispatch({ type: toggleAmountAction, payload: { id, type } })
-
     const remove = (id) => dispatch({ type: removeFromCartAction, payload: id })
     const increase = (id) => dispatch({ type: increaseItemAmoutOfCartAction, payload: id })
     const decrease = (id) => dispatch({ type: decreaseItemAmoutOfCartAction, payload: id })
@@ -46,11 +43,9 @@ const CartProvider = ({ children }) => {
         <CartContext.Provider
             value={{
                 ...state,
-                clearCart,
                 remove,
                 increase,
                 decrease,
-                toggleAmount,
             }}
         >
             {children}
