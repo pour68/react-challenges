@@ -1,6 +1,6 @@
 import { clearCartAction, removeFromCartAction, increaseItemAmoutOfCartAction, decreaseItemAmoutOfCartAction, loadingAction, displayItemsAction, toggleAmountAction, getTotalsAction } from "../actions/cartActions";
 
-// step 6: implement reducer actions
+// step 4: implement reducer actions
 const cartReducer = (state, action) => {
     switch (action.type) {
         case clearCartAction:

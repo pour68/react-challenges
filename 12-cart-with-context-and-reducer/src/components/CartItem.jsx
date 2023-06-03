@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 
-// step 11: display data and feed events
+// step 10: display data and feed events
 const CartItem = (props) => {
     const { cart } = props;
     const { decrease, increase } = useContext(CartContext);

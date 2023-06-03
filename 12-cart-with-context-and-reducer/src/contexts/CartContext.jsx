@@ -18,7 +18,7 @@ const CartProvider = ({ children }) => {
     // step 1: use reducer hook
     const [state, dispatch] = useReducer(cartReducer, initialState)
 
-    // step 3: define handlers
+    // step 5: define handlers
     const clearCart = () => dispatch({ type: clearCartAction })
     const remove = (id) => dispatch({ type: removeFromCartAction, payload: id })
     const increase = (id) => dispatch({ type: increaseItemAmoutOfCartAction, payload: id })
@@ -30,12 +30,12 @@ const CartProvider = ({ children }) => {
         dispatch({ type: displayItemsAction, payload: carts })
     }
 
-    // step 7: fetch data on page load
+    // step 6: fetch data on page load
     useEffect(() => {
         fetchData()
     }, [])
 
-    // step 8: calculate total
+    // step 7: calculate total
     useEffect(() => {
         dispatch({ type: getTotalsAction })
     }, [state.carts])
