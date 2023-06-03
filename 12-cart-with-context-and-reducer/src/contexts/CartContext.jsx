@@ -4,9 +4,10 @@ import { sendGetRequest } from '../utils/fetchData'
 import PropTypes from "prop-types";
 import { clearCartAction, removeFromCartAction, increaseItemAmoutOfCartAction, decreaseItemAmoutOfCartAction, loadingAction, displayItemsAction, toggleAmountAction, getTotalsAction } from "../actions/cartActions";
 
+// step 1: create context for cart
 const CartContext = React.createContext();
 
-// step 2: define initial state
+// step 3: define initial state
 const initialState = {
     loading: false,
     carts: [],
@@ -15,10 +16,10 @@ const initialState = {
 }
 
 const CartProvider = ({ children }) => {
-    // step 1: use reducer hook
+    // step 2: use reducer hook
     const [state, dispatch] = useReducer(cartReducer, initialState)
 
-    // step 5: define handlers
+    // step 6: define handlers
     const clearCart = () => dispatch({ type: clearCartAction })
     const toggleAmount = (id, type) => dispatch({ type: toggleAmountAction, payload: { id, type } })
 
@@ -31,12 +32,12 @@ const CartProvider = ({ children }) => {
         dispatch({ type: displayItemsAction, payload: carts })
     }
 
-    // step 6: fetch data on page load
+    // step 7: fetch data on page load
     useEffect(() => {
         fetchData()
     }, [])
 
-    // step 7: calculate total
+    // step 8: calculate total
     useEffect(() => {
         dispatch({ type: getTotalsAction })
     }, [state.carts])
