@@ -1,0 +1,19 @@
+.movie__genres span::after {
+    content: ", ";
+}
+
+.movie__genres span:last-child::after {
+    content: "";
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.genres, .movies {
+    text-transform: capitalize;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
